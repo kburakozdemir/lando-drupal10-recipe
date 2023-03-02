@@ -1,4 +1,4 @@
-# Quick Start for Drupal 9 and Lando
+# Quick Start for Drupal 10 and Lando
 
 All of the bash commands in this document must be run in repo root.
 
