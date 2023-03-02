@@ -16,12 +16,12 @@ lando start
 
 After starting Lando, you will see the URLs. Please do not visit them at this moment.
 
-![URLs](https://i.imgur.com/LlN94Ls.png)
+![URLs](https://i.imgur.com/rmtQ4Ra.png)
 
 Continue running the command below:
 
 ```bash
-lando composer create-project drupal/recommended-project:^9 /app/temp --no-install
+lando composer create-project drupal/recommended-project /app/temp --no-install
 
 rsync -rtv --remove-source-files ./temp/ ./drupal/
 
@@ -31,10 +31,6 @@ rm ./drupal/web/.gitkeep
 
 lando composer install # do not forget to confirm plugins when prompted
 ```
-
-Note: This is resolved. Please see [Composer v2.2 prompts to authorize plugins](https://www.drupal.org/project/drupal/issues/3255749) and [Composer 2.2+ Authorized Plugins](https://www.drupal.org/node/3294646).
-
-![Allow plugins](https://i.imgur.com/AKjMevW.png)
 
 Install drush
 
@@ -51,7 +47,7 @@ lando drush --version
 
 You can now visit the URLs mentioned above and perform an installation via browser:
 
-![Drupal Installation](https://i.imgur.com/M3YcTOL.png)
+![Drupal Installation](https://i.imgur.com/JijDD5t.png)
 
 ### Automated Installation via drush
 
