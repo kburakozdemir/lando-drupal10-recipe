@@ -1,4 +1,4 @@
-# Quick Start for Drupal 10 and Lando
+# Quick Start for Drupal 11 and Lando
 
 All of the bash commands in this document must be run in repo root.
 
@@ -62,7 +62,7 @@ lando drush site-install \
   standard \
   --site-name='Drupal using Lando' \
   --locale=en \
-  --db-url=mysql://drupal10:drupal10@database:3306/drupal10 \
+  --db-url=mysql://drupal11:drupal11@database:3306/drupal11 \
   --account-name=admin \
   --account-pass=admin \
   --yes
@@ -79,7 +79,7 @@ lando drush site-install \
   standard \
   --site-name='Drupal using Lando' \
   --locale=tr \
-  --db-url=mysql://drupal10:drupal10@database:3306/drupal10 \
+  --db-url=mysql://drupal11:drupal11@database:3306/drupal11 \
   --account-name=admin \
   --account-pass=admin \
   --yes
@@ -95,7 +95,7 @@ This is a multi-lingual Drupal demo containing realistic content:
 lando drush site-install \
   demo_umami \
   --site-name='Umami Food Magazine' \
-  --db-url=mysql://drupal10:drupal10@database:3306/drupal10 \
+  --db-url=mysql://drupal11:drupal11@database:3306/drupal11 \
   --account-name=admin \
   --account-pass=admin \
   --yes
@@ -103,29 +103,6 @@ lando drush site-install \
 
 ## Admin Interface
 
-Visit `https://dev-drupal10.lndo.site/user/login`.
+Visit `https://dev-drupal11.lndo.site/user/login`.
 
 If 'Automated Installation via drush' is used for installation, use `admin` for both username and password.
-
-## Environment Information
-
-The operating system and other software used are as follows:
-
-```txt
-lsb_release -a
-No LSB modules are available.
-Distributor ID: Ubuntu
-Description:    Ubuntu 22.04.2 LTS
-Release:        22.04
-Codename:       jammy
-
-lando version
-v3.11.0
-
-sudo apt-cache policy docker-ce
-docker-ce:
-  Installed: 5:20.10.19~3-0~ubuntu-jammy
-
-docker-compose --version
-docker-compose version 1.29.2, build unknown
-```

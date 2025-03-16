@@ -8,9 +8,6 @@ notes/
 
 dumps/
 
-# for development purposes
-test.sh
-
 drupal/private-files/*
 !drupal/private-files/.gitkeep
 !drupal/private-files/.htaccess

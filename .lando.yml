@@ -1,14 +1,15 @@
-name: dev-drupal10
-recipe: drupal10
+name: dev-drupal11
+recipe: drupal11
 config:
-  database: mariadb:10.4.27-debian-11-r20
+  database: mariadb:10.11.8
+  xdebug: false
 services:
   appserver:
+    overrides:
+      environment:
+        XDEBUG_MODE: "debug,develop"
     webroot: drupal/web
-    type: php:8.1
-    # xdebug: debug
-    # config:
-    #   php: scripts/lando-customizations/php.ini
+    type: php:8.3
     run_as_root:
       - ln -snf /usr/share/zoneinfo/Europe/Istanbul /etc/localtime
       - echo "Europe/Istanbul" > /etc/timezone
@@ -25,6 +26,20 @@ services:
   pma:
     type: phpmyadmin
 tooling:
+  xdebug-on:
+    service: appserver
+    description: Enable Xdebug.
+    user: root
+    cmd:
+      - docker-php-ext-enable xdebug && kill -USR2 $(pgrep -o php-fpm) > /dev/null || /etc/init.d/apache2 reload
+      - tput setaf 2 && echo "Xdebug On" && tput sgr 0 && echo
+  xdebug-off:
+    service: appserver
+    description: Disable Xdebug.
+    user: root
+    cmd:
+      - rm /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini && kill -USR2 $(pgrep -o php-fpm) > /dev/null || /etc/init.d/apache2 reload
+      - tput setaf 1 && echo "Xdebug Off" && tput sgr 0 && echo
   drush:
     service: appserver
     cmd:
