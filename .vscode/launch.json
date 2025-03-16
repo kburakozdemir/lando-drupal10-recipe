@@ -8,7 +8,10 @@
       "port": 9003,
       "log": true,
       "pathMappings": {
-        "/app/": "${workspaceRoot}/"
+        "/app/": "${workspaceFolder}/"
+      },
+      "xdebugSettings": {
+        "show_hidden": 1
       }
     }
   ]
