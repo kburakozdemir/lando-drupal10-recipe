@@ -19,12 +19,12 @@ services:
     #   - docker-php-ext-enable uploadprogress 2>&1 >/dev/null
     #   - echo "enabling apache modules" && a2enmod expires headers deflate rewrite 2>&1 >/dev/null
     #   - echo "restarting apache" && service apache2 reload 2>&1 >/dev/null
-  mailhog:
-    type: mailhog
-    hogfrom:
-      - appserver
-  pma:
-    type: phpmyadmin
+  # mailhog:
+  #   type: mailhog
+  #   hogfrom:
+  #     - appserver
+  # pma:
+  #   type: phpmyadmin
 tooling:
   xdebug-on:
     service: appserver
