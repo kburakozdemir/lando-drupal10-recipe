@@ -47,7 +47,7 @@ lando drush --version
 
 You can now visit the URLs mentioned above and perform an installation via browser:
 
-![Drupal Installation](https://i.imgur.com/JijDD5t.png)
+![Manual Drupal Installation](https://i.imgur.com/jxMDLac.png)
 
 ### Automated Installation via drush
 
@@ -68,6 +68,8 @@ lando drush site-install \
   --yes
 ```
 
+![Standard Drupal Installation Home Page](https://i.imgur.com/7Kyh31D.png)
+
 #### Standard Drupal Installation in Another Language
 
 If you want to perform a standard Drupal installation with a different language, change the `locale` option (in this example `tr` (Turkish) is used):
@@ -85,6 +87,8 @@ lando drush site-install \
   --yes
 ```
 
+![Standard Drupal Installation in Another Language Home Page](https://i.imgur.com/wG8D0CD.png)
+
 #### Install Umami Demo Profile
 
 This is a multi-lingual Drupal demo containing realistic content:
@@ -101,8 +105,12 @@ lando drush site-install \
   --yes
 ```
 
+![Drupal Umami Food Magazine Demo Home Page](https://i.imgur.com/dI648Dz.jpeg)
+
 ## Admin Interface
 
-Visit `https://dev-drupal11.lndo.site/user/login`.
+Visit [https://dev-drupalcore.lndo.site/user/login](https://dev-drupalcore.lndo.site/user/login).
 
 If 'Automated Installation via drush' is used for installation, use `admin` for both username and password.
+
+![Drupal Login Page](https://i.imgur.com/PT9DdIx.png)
