@@ -1,5 +1,7 @@
 # Quick Start for Drupal 11 and Lando
 
+**Requirements:** [Lando](https://lando.dev/).
+
 All of the bash commands in this document must be run in repo root.
 
 After cloning the repo, you're free to delete the `.git` directory.
