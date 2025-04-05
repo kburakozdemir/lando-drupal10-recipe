@@ -16,7 +16,7 @@ lando start
 
 After starting Lando, you will see the URLs. Please do not visit them at this moment.
 
-![URLs](https://i.imgur.com/rmtQ4Ra.png)
+![Lando Start URLs](https://i.imgur.com/X7ioisD.png)
 
 Continue running the command below:
 
