@@ -1,5 +1,7 @@
 # Quick Start for Drupal 11 and Lando
 
+**RETIRED!** This repository is no longer maintained. Please refer to the [Binbiriz Quick start for Drupal core using Lando](https://github.com/Binbiriz/lando-drupal-core-quick-start) repository.
+
 **Requirements:** [Lando](https://lando.dev/).
 
 All of the bash commands in this document must be run in repo root.
