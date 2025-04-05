@@ -1,4 +1,4 @@
-name: dev-drupal11
+name: dev-drupalcore
 recipe: drupal11
 config:
   database: mariadb:10.11.8
@@ -10,15 +10,15 @@ services:
         XDEBUG_MODE: "debug,develop"
     webroot: drupal/web
     type: php:8.3
-    run_as_root:
-      - ln -snf /usr/share/zoneinfo/Europe/Istanbul /etc/localtime
-      - echo "Europe/Istanbul" > /etc/timezone
-    build_as_root:
-      - echo "updating apt" && apt update -y
-      - echo "installing upload progress" && pecl install uploadprogress 2>&1 >/dev/null
-      - docker-php-ext-enable uploadprogress 2>&1 >/dev/null
-      - echo "enabling apache modules" && a2enmod expires headers deflate rewrite 2>&1 >/dev/null
-      - echo "restarting apache" && service apache2 reload 2>&1 >/dev/null
+    # run_as_root:
+    #   - ln -snf /usr/share/zoneinfo/Europe/Istanbul /etc/localtime
+    #   - echo "Europe/Istanbul" > /etc/timezone
+    # build_as_root:
+    #   - echo "updating apt" && apt update -y
+    #   - echo "installing upload progress" && pecl install uploadprogress 2>&1 >/dev/null
+    #   - docker-php-ext-enable uploadprogress 2>&1 >/dev/null
+    #   - echo "enabling apache modules" && a2enmod expires headers deflate rewrite 2>&1 >/dev/null
+    #   - echo "restarting apache" && service apache2 reload 2>&1 >/dev/null
   mailhog:
     type: mailhog
     hogfrom:
